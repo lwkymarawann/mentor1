@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    .rectangle {
+      position: absolute;
+      top: 26.8%;
+      left: 30%;
+      height:400px;
+      width: 300px;
+      background-image: linear-gradient(#6541FD,#332DE9);
+      border-radius: 20px;
+      display:flex;
+    }
+    @font-face {
+      font-family: Font;      
+      src: url(HankenGrotesk-VariableFont_wght.ttf);
+    }
+    .body{
+      font-family: Font;
+    }
+
+    .dot {
+      position: absolute;
+      left: 22%;
+      top: 16%;
+      height: 170px;
+      width: 170px;
+      background-image: -webkit-linear-gradient(bottom, #5932ea 0%, #4633ED 90%);
+        border-radius: 50%;
+      display:block;
+    }
+    .text{
+      font-style:bold;
+      font-weight:bolder;
+
+      color: white;
+      font-family: Font;
+      position: absolute;
+      font-size:20px;
+      left: 36%;
+      display:block;
+    }
+    .score{
+      font-weight:bolder;
+
+      color: white;
+      font-family: Font;
+      position: absolute;
+      font-style: bold;
+      font-size: 55px;
+      left: 40%;
+      top: 15%;
+      display:block;
+    }
+    .out{
+      font-weight:bolder;
+
+      color: grey;
+      font-family: Font;
+      position: absolute;
+      left: 38%;
+      display:block;
+      top: 42%;
+      left: 42%;
+    }
+    .great{
+      font-weight:bolder;
+
+      color: white;
+      font-family: Font;
+      font-size: 25px;;
+      position: absolute;
+      display: block;
+      top: 58%;
+      left: 41%;
+    }
+    .pa{
+
+      font-weight:bolder;
+      text-align: center;
+      color: white;
+      font-family: Font;
+      position: absolute;
+      font-size: 15px;
+      display: block;
+      top: 72%;
+      left: 15%;
+      right: 12%;
+    }
+
+
+
+
+    .position{
+      position: absolute;
+      
+      color: black;
+      font-family: Font;
+      margin-left: 41.8%;
+      margin-top:11.8%;
+      box-shadow: 1px 1px grey;
+      height:405px;
+      width: 400px;
+      background-color:white;
+      border-radius: 20px;
+      display:flex;
+      z-index: -999;
+  
+    }
+    
+
+    .textt{
+      font-weight:bolder;
+
+      position: absolute;
+      margin-left: 35.6%;
+      margin-top:7%;
+    }
+    .reaction1{
+      margin-left: 41.1%;
+      margin-top: 23%;
+      font-weight: 300;
+      position: absolute;
+      display: inline-block;
+      color:#ff5555;
+      font-size: 15px;
+      
+    }
+    .score1{
+      margin-left: 80.1%;
+      margin-top: 23%;
+      position: absolute;
+      display: inline-block;
+    }
+    .reaction2{
+      font-size: 15px;
+      color: orange;
+      margin-left: 41.1%;
+      margin-top: 38%;
+      position: absolute;
+      display: inline-block;
+      
+    }
+    .score2{
+      margin-left: 80.1%;
+      margin-top: 38%;
+      position: absolute;
+      display: inline-block;
+    }
+    .reaction3{
+      font-size: 15px;
+      color: #00bb8f;
+      margin-left: 41.1%;
+      margin-top: 53%;
+      position: absolute;
+      display: inline-block;
+      
+    }
+    .score3{
+      margin-left: 80.1%;
+      margin-top: 53%;
+      position: absolute;
+      display: inline-block;
+    }
+    .reaction4{
+      font-size: 15px;
+      color:#1125d6;
+      margin-left: 41.1%;
+      margin-top: 68%;
+      position: absolute;
+      display: inline-block;
+      
+    }
+    .score4{
+      margin-left: 80.1%;
+      margin-top: 68%;
+      position: absolute;
+      display: inline-block;
+    }
+    .btn{
+      margin-left: 38.1%;
+      margin-top: 85%;
+      height: 40px;
+      border-radius: 20px;
+      position: absolute;
+      background-color:#303B59;
+      color:white;
+      width: 210px;
+      cursor: pointer;
+      border-style: none;
+
+    }
+    .btn:hover{
+      transition-duration: 1s;
+      background-color:rgb(94, 35, 231);
+
+    }
+    .reaction{
+      position: absolute;
+      display: inline-block;
+      margin-left:-25px;
+    }
+    .memory{
+      position: absolute;
+      display: inline-block;
+      margin-left:-25px;
+    }
+    .verbal{
+      position: absolute;
+      display: inline-block;
+      margin-left:-25px;
+    }
+    .visual{
+      position: absolute;
+      display: inline-block;
+      margin-left:-25px;
+    }
+    .grey{
+      color: grey;
+      margin-left:4px;
+
+    }
+
+  </style>
+</head>
+<body>
+  <div>
+    <div class="rectangle">
+      <p class="text">Your Result</p>
+      <p class="dot"></p>
+      <p class="score">76</p>
+      <p class="out">of 100</p>
+      <p class="great">Great</p>
+      <p class="pa">You scored higher than 65% of the people who have taken these tests.</p>
+      
+
+
+    </div>
+    <div class="position">
+      <p class="textt">Summary</p>
+      <p class="reaction1"><img src="icon-reaction.svg" alt="reaction icon" class="reaction"> Reaction</p>
+      <p class="score1">80<span class="grey">  / 100</span></p>
+      <p class="reaction2"><img src="icon-memory.svg" alt="Memory icon" class="memory"> Memory</p>
+      <p class="score2">92<span class="grey">  / 100</span></p>
+      <p class="reaction3"><img src="icon-verbal.svg" alt="Verbal icon" class="verbal"> Verbal</p>
+      <p class="score3">61<span class="grey">  / 100</span></p>
+      <p class="reaction4"><img src="icon-visual.svg" alt="Visual icon" class="visual"> Visual</p>
+      <p class="score4">72<span class="grey">  / 100</span></p>
+      <button class="btn">
+        Continue
+      </button>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
